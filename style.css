@@ -1,0 +1,408 @@
+/* =========================
+   RESET BASE
+========================= */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
+    scroll-behavior: smooth;
+}
+
+/* =========================
+   ANIMAÇÃO DE GRADIENT
+========================= */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* =========================
+   🌙 DARK MODE (PADRÃO)
+========================= */
+body {
+    background: radial-gradient(circle at center, #1a1a1a, #0d0d0d, #111827, #1e293b);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    color: #ffffff;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Neon overlay leve */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 20% 20%, rgba(0,255,255,0.08), transparent 70%),
+                radial-gradient(circle at 80% 80%, rgba(255,0,255,0.08), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    background-color: rgba(34, 34, 34, 0.9);
+    backdrop-filter: blur(10px);
+    transition: top 0.3s ease, background-color 0.3s ease;
+}
+
+/* NAV LINKS */
+header .nav-link {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+header .nav-link.text-secondary {
+    color: #bbb;
+}
+
+header .nav-link:hover {
+    color: #4ea8ff;
+}
+
+/* =========================
+   HERO
+========================= */
+.cover-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #1a1a1a, #0d0d0d, #111827, #1e293b);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    z-index: 1;
+}
+
+/* =========================
+   SEÇÕES COM CAMADA TRANSPARENTE
+========================= */
+.introducao, .linguagens, .projetos, .sobre, .contato { 
+    background: linear-gradient( 270deg, rgba(40, 149, 149, 0.08),
+     rgba(161, 99, 241, 0.08), rgba(222, 222, 222, 0.08) );
+      background-size: 400% 400%; animation: gradientMove 15s ease infinite; 
+      backdrop-filter: blur(6px); border-radius: 12px;
+       padding: 17rem 2rem 18rem 2rem; /* top | right | bottom | left */
+       text-align: center; z-index: 1; }
+
+/* TEXTOS */
+.texto-int {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1.2rem;
+}
+
+/* CARDS */
+.card {
+    border: none;
+    border-radius: 12px;
+    background-color: rgba(34,34,34,0.8);
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,255,255,0.4);
+}
+
+/* LINKS */
+a {
+    color: #4ea8ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+.profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #4ea8ff;
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 30px rgba(0, 255, 255, 0.5);
+}
+
+/* =========================
+   SEÇÃO CONTATO
+========================= */
+.contato {
+    margin-bottom: 1rem;
+    padding: 4rem 2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    text-align: center;
+    background: radial-gradient(
+        circle at center,
+        rgba(40, 149, 149, 0.08),
+        rgba(161, 99, 241, 0.08),
+        rgba(222, 222, 222, 0.08)
+    );
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+}
+
+/* CARD/FORMULÁRIO */
+.contato-card {
+    background-color: rgba(20, 20, 40, 0.6);
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    backdrop-filter: blur(6px);
+}
+
+/* LABELS E INPUTS */
+.contato-card label {
+    display: block;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.contato-card input,
+.contato-card textarea {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background-color: rgba(34, 34, 34, 0.8);
+    color: #ffffff;
+}
+
+.contato-card input::placeholder,
+.contato-card textarea::placeholder {
+    color: #ccc;
+}
+
+/* BOTÃO */
+.contato-card button {
+    background-color: #4ea8ff;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contato-card button:hover {
+    background-color: #3b8cd1;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    background: linear-gradient(135deg, #0a0a0a, #111827, #1e293b);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    font-size: 0.9rem;
+    z-index: 1;
+}
+
+/* Links do footer */
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    color: #4ea8ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #00ffff;
+}
+
+/* Redes sociais */
+.footer-social .footer-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-social .footer-icon:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 6px #4ea8ff);
+}
+
+/* =========================
+   ☀️ LIGHT MODE
+========================= */
+body.light {
+    background: linear-gradient(135deg, #ffffff, #eaeaea, #f5f5f5);
+    background-size: 400% 400%;
+    animation: gradientMove 15s linear infinite;
+    color: #111;
+}
+
+/* header light */
+body.light header {
+    background-color: #ddd;
+}
+
+/* hero light animado */
+body.light .cover-container {
+    background: radial-gradient(circle at center, #ffffff, #eaeaea, #f5f5f5);
+    background-size: 400% 400%;
+    animation: gradientMove 15s linear infinite;
+}
+
+/* seções light */
+body.light .introducao,
+body.light .projetos {
+    background-color: #ffffff;
+}
+
+body.light .linguagens,
+body.light .sobre,
+body.light .contato {
+    background-color: #f1f1f1;
+}
+
+/* cards light */
+body.light .card {
+    background-color: #ffffff;
+    color: #111;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* links light */
+body.light a {
+    color: #0077cc;
+}
+
+/* contato-card light */
+body.light .contato-card {
+    background-color: #f1f1f1;
+    color: #111111;
+}
+
+body.light .contato-card label {
+    color: #111111;
+}
+
+body.light .contato-card input,
+body.light .contato-card textarea {
+    background-color: #fff;
+    color: #111111;
+    border: 1px solid #ccc;
+}
+
+body.light .contato-card input::placeholder,
+body.light .contato-card textarea::placeholder {
+    color: #666;
+}
+
+body.light .contato-card button {
+    background-color: #0077cc;
+    color: #fff;
+}
+
+body.light .contato-card button:hover {
+    background-color: #005fa3;
+}
+
+/* footer light animado */
+body.light .footer {
+    background: linear-gradient(135deg, #f5f5f5, #eaeaea, #ffffff);
+    background-size: 400% 400%;
+    animation: gradientMove 15s linear infinite;
+    color: #111;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+/* links do footer light */
+body.light .footer-links a {
+    color: #0077cc;
+}
+
+body.light .footer-links a:hover {
+    color: #004a99;
+}
+
+body.light .footer-social .footer-icon:hover {
+    filter: drop-shadow(0 0 6px #0077cc);
+}
+
+/* =========================
+   BOTÕES
+========================= */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 768px) {
+    .cover-container {
+        padding: 2rem;
+    }
+
+    .introducao,
+    .linguagens,
+    .projetos,
+    .sobre {
+        padding: 4rem 1.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .texto-int {
+        font-size: 1.1rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-social {
+        gap: 1rem;
+        justify-content: center;
+    }
+}

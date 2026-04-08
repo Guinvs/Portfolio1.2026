@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio-2026</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Seu CSS -->
+<link rel="stylesheet" href="style.css">
+
+<!-- Seu JS -->
+<script src="index.js" defer></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header> 
+    <div class="d-flex flex-wrap align-items-center justify-content-between">
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto justify-content-center">
+            <li><a href="#inicio" class="nav-link px-2 text-secondary">Início</a></li>
+            <li><a href="#introducao" class="nav-link px-2 text-white">Introdução</a></li>
+            <li><a href="#linguagens" class="nav-link px-2 text-white">Linguagens</a></li>
+            <li><a href="#projetos" class="nav-link px-2 text-white">Projetos</a></li>
+            <li><a href="#sobre" class="nav-link px-2 text-white">Sobre</a></li>
+            <li><a href="#contato" class="nav-link px-2 text-white">Contato</a></li>
+        </ul>
+
+        <button onclick="toggleTheme()" class="btn btn-outline-light">
+            Tema
+        </button>
+
+    </div>
+</header>
+
+
+<!-- HERO -->
+<section id="inicio" class="cover-container text-center">
+    <!-- Foto de perfil -->
+    <img src="imagens/profile.png" alt="Foto de perfil" class="profile-img mb-3">
+
+    <h1 class="display-5 fw-bold mb-2">Guilherme Alves</h1>
+    <p class="lead">Início</p>
+</section>
+
+<!-- INTRODUÇÃO -->
+<section id="introducao" class="introducao">
+    <h1 class="display-4 fw-bold mb-3 text-center">Introdução</h1>
+    <p class="texto-int">
+        Estudante de Engenharia de Software com foco em desenvolvimento Back-end e Full Stack.<br><br>
+        Experiência com Python, Java e SQL, aplicados em projetos com APIs e banco de dados. 
+        Boa base em lógica de programação e resolução de problemas.<br><br>
+        Busco oportunidade de estágio em desenvolvimento para evoluir tecnicamente e contribuir com projetos reais.
+    </p>
+</section>
+
+<!-- LINGUAGENS -->
+<section id="linguagens" class="linguagens">
+    <h1 class="display-4 fw-bold mb-4 text-center">Linguagens</h1>
+
+    <div class="container">
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card h-100 p-3">
+                    <h3>Python</h3>
+                    <p>
+                        Desenvolvimento de um RPG de texto com foco em lógica e estrutura de código.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 p-3">
+                    <h3>Java</h3>
+                    <p>
+                        Aplicação em exercícios e sistemas de lógica, reforçando fundamentos.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 p-3">
+                    <h3>Front-end</h3>
+                    <p>
+                        Desenvolvimento de sites com HTML, CSS, JavaScript e Bootstrap.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROJETOS -->
+<section id="projetos" class="projetos">
+    <h1 class="display-4 fw-bold mb-4 text-center">Projetos</h1>
+
+    <div class="container">
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card h-100 p-3">
+                    <p>Projeto 1 (em breve)</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 p-3">
+                    <p>Projeto 2 (em breve)</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 p-3">
+                    <p>Projeto 3 (em breve)</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="sobre">
+    <h1 class="display-4 fw-bold mb-4 text-center">Sobre</h1>
+
+    <div class="container text-center">
+        <div class="card p-4 mx-auto" style="max-width: 600px;">
+            
+            <p class="mb-3">
+                Entre em contato comigo:
+            </p>
+
+            <p>
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/guilherme-a-b48437229" target="_blank" class="d-inline-flex align-items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#0A66C2">
+                        <path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.5c-1.14 0-2.06-.93-2.06-2.07 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.07-2.06 2.07zM20.45 20.45h-3.56v-5.57c0-1.33-.02-3.05-1.86-3.05-1.86 0-2.15 1.45-2.15 2.95v5.67H9.38V9h3.42v1.56h.05c.48-.9 1.66-1.86 3.42-1.86 3.66 0 4.34 2.41 4.34 5.55v6.2z"/>
+                    </svg>
+                    LinkedIn
+                </a>
+            </p>
+
+            <p>
+                <!-- GitHub -->
+                <!-- GitHub -->
+<a href="https://github.com/Guinvs" target="_blank" class="d-inline-flex align-items-center gap-2">
+    <svg class="github-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.29 3.438 9.77 8.205 11.36.6.11.82-.26.82-.577 0-.285-.01-1.04-.016-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.73.082-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.998.108-.775.42-1.305.763-1.605-2.665-.3-5.467-1.334-5.467-5.933 0-1.31.468-2.382 1.235-3.222-.123-.303-.535-1.523.117-3.176 0 0 1.008-.323 3.3 1.23a11.52 11.52 0 0 1 3-.404c1.02.004 2.045.138 3 .404 2.29-1.553 3.296-1.23 3.296-1.23.653 1.653.24 2.873.118 3.176.77.84 1.233 1.912 1.233 3.222 0 4.61-2.807 5.63-5.48 5.922.432.372.815 1.106.815 2.228 0 1.608-.014 2.903-.014 3.293 0 .32.216.694.825.576C20.565 22.27 24 17.79 24 12.5 24 5.87 18.63.5 12 .5z"/>
+    </svg>
+    GitHub
+</a>
+                </a>
+            </p>
+
+            <p>
+                <!-- Email -->
+                 Email: 
+                <a href="mailto:guilherme.alvescorp@outlook.com">
+                    guilherme.alvescorp@outlook.com
+                </a>
+            </p>
+
+        </div>
+    </div>
+</section>
+<!-- CONTATO -->
+<section id="contato" class="contato">
+    <h1 class="display-4 fw-bold mb-4 text-center">Contato</h1>
+
+    <div class="container">
+        <div class="card p-4 mx-auto contato-card" style="max-width: 600px;">
+            <form action="mailto:guilherme.alvescorp@outlook.com" method="post" enctype="text/plain">
+    <label>Nome:</label>
+    <input type="text" name="nome" placeholder="Seu nome" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" placeholder="Seu email" required>
+
+    <label>Mensagem:</label>
+    <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+
+    <button type="submit">Enviar</button>
+</form>
+        </div>
+    </div>
+</section>
+<!-- FOOTER -->
+<footer class="footer d-flex justify-content-between align-items-center px-4 py-3">
+    
+    <!-- Logo / Nome -->
+    <h4 class="mb-0">Portfólio 2026</h4>
+
+    <!-- Links rápidos -->
+    <ul class="footer-links list-unstyled d-flex gap-4 mb-0">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#introducao">Introdução</a></li>
+        <li><a href="#linguagens">Linguagens</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+    </ul>
+
+    <!-- Redes sociais -->
+    <div class="footer-social d-flex gap-3">
+        <a href="https://www.linkedin.com/in/guilherme-a-b48437229" target="_blank" class="d-inline-flex align-items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#0A66C2">
+                        <path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.5c-1.14 0-2.06-.93-2.06-2.07 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.07-2.06 2.07zM20.45 20.45h-3.56v-5.57c0-1.33-.02-3.05-1.86-3.05-1.86 0-2.15 1.45-2.15 2.95v5.67H9.38V9h3.42v1.56h.05c.48-.9 1.66-1.86 3.42-1.86 3.66 0 4.34 2.41 4.34 5.55v6.2z"/>
+                    </svg>
+        </a>
+        <a href="https://github.com/Guinvs" target="_blank" class="d-inline-flex align-items-center gap-2">
+    <svg class="github-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.29 3.438 9.77 8.205 11.36.6.11.82-.26.82-.577 0-.285-.01-1.04-.016-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.73.082-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.998.108-.775.42-1.305.763-1.605-2.665-.3-5.467-1.334-5.467-5.933 0-1.31.468-2.382 1.235-3.222-.123-.303-.535-1.523.117-3.176 0 0 1.008-.323 3.3 1.23a11.52 11.52 0 0 1 3-.404c1.02.004 2.045.138 3 .404 2.29-1.553 3.296-1.23 3.296-1.23.653 1.653.24 2.873.118 3.176.77.84 1.233 1.912 1.233 3.222 0 4.61-2.807 5.63-5.48 5.922.432.372.815 1.106.815 2.228 0 1.608-.014 2.903-.014 3.293 0 .32.216.694.825.576C20.565 22.27 24 17.79 24 12.5 24 5.87 18.63.5 12 .5z"/>
+    </svg>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
